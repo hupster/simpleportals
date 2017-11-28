@@ -183,6 +183,10 @@ public class BlockPortal extends BlockBreakable
 					return;
 				}
 			}
+			else if (!(entity instanceof EntityPlayerMP))
+			{
+				return;
+			}
 			
 			// Bypass the power cost for players in creative mode
 			boolean bypassPowerCost = (entity instanceof EntityPlayerMP && ((EntityPlayerMP)entity).capabilities.isCreativeMode);
